@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
 import Home from './screens/Home'
 import Second from './screens/Second'
 import Modal from './screens/Modal'
@@ -15,7 +16,7 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name='Second' component={Second} />
         </Stack.Group>
-        <Stack.Group screenOptions={{presentation: 'modal'}}>
+        <Stack.Group screenOptions={{ presentation: 'modal' }}>
           <Stack.Screen name='Modal' component={Modal} />
         </Stack.Group>
       </Stack.Navigator>
