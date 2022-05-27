@@ -13,6 +13,10 @@ const Second = () => {
         onPress={() => navigation.navigate("Modal")} 
         title="Open Modal">
       </Button>
+      <Button 
+        onPress={() => navigation.goBack()} 
+        title="Go Back">
+      </Button>
     </SafeAreaView>
   )
 }
