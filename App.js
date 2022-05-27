@@ -16,7 +16,7 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name='Second' component={Second} />
         </Stack.Group>
-        <Stack.Group screenOptions={{ presentation: 'modal' }}>
+        <Stack.Group screenOptions={{ presentation: 'modal', headerShown: false }}>
           <Stack.Screen name='Modal' component={Modal} />
         </Stack.Group>
       </Stack.Navigator>
