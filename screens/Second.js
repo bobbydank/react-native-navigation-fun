@@ -1,13 +1,32 @@
-import { View, Text } from 'react-native'
+import { Text, Button, StyleSheet } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
 
 const Second = () => {
+  const navigation = useNavigation();
+
   return (
-    <SafeAreaView>
-      <Text>Second</Text>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>Second</Text>
+      <Button 
+        onPress={() => navigation.navigate("Modal")} 
+        title="Open Modal">
+      </Button>
     </SafeAreaView>
   )
 }
 
 export default Second
+
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      justifyContent: "center"
+  },
+  text: {
+      textAlign: "center",
+      fontSize: 30,
+      marginBottom: 30
+  }
+})
