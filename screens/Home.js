@@ -10,6 +10,12 @@ const Home = () => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
       <Button 
+        onPress={() => navigation.navigate("Modal", {
+          name: "Hi there."
+        })} 
+        title="Open Modal">
+      </Button>
+      <Button 
         onPress={() => navigation.navigate("Second")} 
         title="Go to second screen"
       />

@@ -10,7 +10,9 @@ const Second = () => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.text}>Second</Text>
       <Button 
-        onPress={() => navigation.navigate("Modal")} 
+        onPress={() => navigation.navigate("Modal", {
+          name: "hello"
+        })} 
         title="Open Modal">
       </Button>
       <Button 
