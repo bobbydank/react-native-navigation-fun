@@ -1,26 +1,30 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = (props) => {
-  return (
-    <View style={styles.container}>
-        <View style={styles.buttonContainer}>
-            <Icon.Button
-                name='md-menu'
-                size={30}
-                color="#4F8EF7"
-                backgroundColor="#ffffff">    
-            </Icon.Button>
-        </View>
-        <Text style={styles.titleContainer}>
-            {props.title}
-        </Text>
-        <View style={styles.rightContainer}>
+    const navigation = useNavigation();
 
+    return (
+        <View style={styles.container}>
+            <View style={styles.buttonContainer}>
+                <Icon.Button
+                    name='md-menu'
+                    size={30}
+                    color="#4F8EF7"
+                    backgroundColor="#ffffff"
+                    onPress={() => {navigation.openDrawer()}}>    
+                </Icon.Button>
+            </View>
+            <Text style={styles.titleContainer}>
+                {props.title}
+            </Text>
+            <View style={styles.rightContainer}>
+
+            </View>
         </View>
-    </View>
-  )
+    )
 }
 
 export default Header

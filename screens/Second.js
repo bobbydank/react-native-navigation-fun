@@ -31,9 +31,9 @@ export default Second
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      justifyContent: "center",
-      backgroundColor:"#ffffff"
+    flex: 1,
+    justifyContent: "center",
+    backgroundColor:"#ffffff"
   },
   view: {
     flex: 15,
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },  
   text: {
-      textAlign: "center",
-      fontSize: 30,
-      marginBottom: 30
+    textAlign: "center",
+    fontSize: 30,
+    marginBottom: 30
   }
 })
